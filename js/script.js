@@ -4,7 +4,6 @@ for (let i = 1; i <= 5; i++) {
     const computerNum = Math.floor(Math.random() * 100) + 1;
     computerNums.push(computerNum);
 }
-console.log("Stringa dei numeri generati dal computer", computerNums);
 // .visualizzare i numeri in pagina
 let computerNumsContainer = document.createElement('div');
 document.querySelector('body').append(computerNumsContainer);
@@ -18,13 +17,13 @@ console.log(computerNumsContainer);
 
 setTimeout(function() {
     document.querySelector('div').style.display = "none";
-}, 3000);
+}, 30000);
 
 // Chiedere di inserire i numeri attraverso prompt (x5)
 const userNums = [];
 setTimeout(function() {
     checkedNums = [];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 0; i <= 4; i++) {
         let userNum = parseInt(prompt("inserisci uno dei numeri da memorizzare"));
         userNums.push(userNum);
         // Confronto tra numeri inseriti del computer e i numeri inseriti dall'utente
@@ -45,9 +44,8 @@ setTimeout(function() {
         // .mi serve il this di ogni [i] elemento della stringa dei numeri azzeccati
     const gameResult = document.createElement('span');
     document.querySelector('body').append(gameResult);
-    gameResult.innerHTML = `Ti sei ricordato di ${checkedNums.length} numeri: ${checkedNums}`
-
-}, 3500);
+    gameResult.innerHTML = `OK, hai ricordato ${checkedNums.length} numeri: ${checkedNums}`;
+}, 30200);
 
 
 
