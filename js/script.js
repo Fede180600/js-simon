@@ -5,7 +5,11 @@ for (let i = 1; i <= 5; i++) {
     computerNums.push(computerNum);
 }
 console.log("Stringa dei numeri generati dal computer", computerNums);
-	// .visualizzare i numeri in pagina
+// .visualizzare i numeri in pagina
+let computerNumsContainer = document.createElement('div');
+document.querySelector('body').append(computerNumsContainer);
+computerNumsContainer.innerHTML = `Hai 30 secondi per memorizzare questi numeri: ${computerNums}`;
+console.log(computerNumsContainer);
 
 // Parte timer di 30 sec
 	// .al termine scompaiono i 5 numeri del computer
