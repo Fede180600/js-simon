@@ -18,23 +18,31 @@ console.log(computerNumsContainer);
 
 setTimeout(function() {
     document.querySelector('div').style.display = "none";
-}, 3000);
+}, 30000);
 
 // Chiedere di inserire i numeri attraverso prompt (x5)
 const userNums = [];
 setTimeout(function() {
-    for (let i = 1; i<= 5; i++) {
-        const userNum = parseInt(prompt("inserisci uno dei numeri da memorizzare"));
+    checkedNums = [];
+    for (let i = 1; i <= 5; i++) {
+        let userNum = parseInt(prompt("inserisci uno dei numeri da memorizzare"));
         userNums.push(userNum);
+        // Confronto tra numeri inseriti del computer e i numeri inseriti dall'utente
+        // .mi serve la stringa dei numeri generati dal computer
+        // .imposto ciclo per verificare uno ad uno se 5 i numeri inseriti dall'utente sono presenti nella stringa 
+        // - mi serve un array vuota dove inserire ad ogni ciclo il numero (se azzecatto)
+        const numToCheck = userNum;
+        console.log(numToCheck);
+        if ( computerNums.includes(numToCheck) ) {
+            checkedNums.push(numToCheck);
+        }
+        
     }
-    console.log(userNums);
-}, 4000);
+    console.log("Numeri inseriti dall'utente:", userNums);
+    console.log("Numeri che l'utente si è ricordato:", checkedNums);
+}, 3000);
 
-// Confronto tra numeri inseriti del computer e i numeri inseriti dall'utente
-	// .mi serve la stringa dei numeri generati dal computer
-	// .imposto ciclo per verificare uno ad uno se 5 i numeri inseriti dall'utente sono presenti nella stringa 
-		// - mi serve un array vuota dove inserire ad ogni ciclo il numero (se azzecatto)
-		
+
 
 // Al termine del ciclo stampo quanti e quali numeri sono stati individuati
 	// .mi serve la lunghezza della stringa dei numeri azzeccatti
