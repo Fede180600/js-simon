@@ -1,4 +1,10 @@
 // Generare 5 numeri casuali (1-100)
+const computerNums = [];
+for (let i = 1; i <= 5; i++) {
+    const computerNum = Math.floor(Math.random() * 100) + 1;
+    computerNums.push(computerNum);
+}
+console.log("Stringa dei numeri generati dal computer", computerNums);
 	// .visualizzare i numeri in pagina
 
 // Parte timer di 30 sec
