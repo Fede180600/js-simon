@@ -7,9 +7,6 @@ for (let i = 1; i <= 5; i++) {
 console.log("Stringa dei numeri generati dal computer", computerNums);
 // .visualizzare i numeri in pagina
 let computerNumsContainer = document.createElement('div');
-
-
-
 document.querySelector('body').append(computerNumsContainer);
 computerNumsContainer.innerHTML = `Memorizza questi numeri, hai 30 secondi: ${computerNums}`
 ;
@@ -19,11 +16,19 @@ console.log(computerNumsContainer);
 // .al termine scompaiono i 5 numeri del computer
 // .mi serve il div con i numeri del computer
 
-const count = setTimeout(function() {
+setTimeout(function() {
     document.querySelector('div').style.display = "none";
-}, 30000);
+}, 3000);
 
 // Chiedere di inserire i numeri attraverso prompt (x5)
+const userNums = [];
+setTimeout(function() {
+    for (let i = 1; i<= 5; i++) {
+        const userNum = parseInt(prompt("inserisci uno dei numeri da memorizzare"));
+        userNums.push(userNum);
+    }
+    console.log(userNums);
+}, 4000);
 
 // Confronto tra numeri inseriti del computer e i numeri inseriti dall'utente
 	// .mi serve la stringa dei numeri generati dal computer
