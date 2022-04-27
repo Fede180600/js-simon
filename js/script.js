@@ -18,7 +18,7 @@ console.log(computerNumsContainer);
 
 setTimeout(function() {
     document.querySelector('div').style.display = "none";
-}, 30000);
+}, 3000);
 
 // Chiedere di inserire i numeri attraverso prompt (x5)
 const userNums = [];
@@ -40,10 +40,14 @@ setTimeout(function() {
     }
     console.log("Numeri inseriti dall'utente:", userNums);
     console.log("Numeri che l'utente si è ricordato:", checkedNums);
-}, 3000);
+    // Al termine del ciclo stampo quanti e quali numeri sono stati individuati
+        // .mi serve la lunghezza della stringa dei numeri azzeccatti
+        // .mi serve il this di ogni [i] elemento della stringa dei numeri azzeccati
+    const gameResult = document.createElement('span');
+    document.querySelector('body').append(gameResult);
+    gameResult.innerHTML = `Ti sei ricordato di ${checkedNums.length} numeri: ${checkedNums}`
+
+}, 3500);
 
 
 
-// Al termine del ciclo stampo quanti e quali numeri sono stati individuati
-	// .mi serve la lunghezza della stringa dei numeri azzeccatti
-	// .mi serve il this di ogni [i] elemento della stringa dei numeri azzeccati
