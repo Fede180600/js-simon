@@ -1,8 +1,13 @@
 // Generare 5 numeri casuali (1-100)
 const computerNums = [];
-for (let i = 1; i <= 5; i++) {
-    const computerNum = Math.floor(Math.random() * 100) + 1;
-    computerNums.push(computerNum);
+while(computerNums.length < 5) {
+    for (let i = 1; i <= 5; i++) {
+        const computerNum = Math.floor(Math.random() * 100) + 1;
+        if ( !computerNums.includes(computerNum)) {
+            computerNums.push(computerNum);
+        }
+    }
+
 }
 // .visualizzare i numeri in pagina
 let computerNumsContainer = document.createElement('div');
